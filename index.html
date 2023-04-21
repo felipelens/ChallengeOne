@@ -3,38 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
+    <header>
+      <img
+        src="img/logo.png"
+        alt="logoOracle"
+        style="width: 150px; margin-left: 1em; margin-right: 1em"
+      />
+      <h1>Encriptar y Desencriptar Con JavaScript</h1>
+    </header>
     <main>
-      <div class="cajaPrincipal">
-        <div class="cabeza">
-          <img class="logo" src="img/logo.png" alt="logoOracle" />
-          <h1>Cristian Felipe Lenis</h1>
-        </div>
-        <div class="cuerpo">
-          <div class="inptt">
+      <div class="primaria">
+        <h2>Encriptador</h2>
+        <div class="cajaPrimaria">
+          <div class="cajaPrimariaUno">
+            <label for="contraseñaEncriptar">Contrasena</label>
             <input
               class="input"
-              type="text"
-              placeholder="Ingrese el texto aqui"
+              type="password"
+              id="contraseñaEncriptar"
+              name="contraseñaEncriptar"
             />
+            <label for="informacionEncriptar">Informacion a encriptar</label>
+            <textarea
+              class="textarea"
+              name="inputEncriptar"
+              id="informacionEncriptar"
+            ></textarea>
+            <button class="buton" id="botonEncriptar">Encriptar</button>
           </div>
-          <div class="buttns">
-            <button class="botones">Encriptar</button>
-            <button class="botones">Desencriptar</button>
+          <div class="cajaPrimariaDos">
+            <label for="resultadoEncriptacion">Texto Encriptado</label>
+            <textarea
+              class="textareaDos"
+              name="resultadoEncriptacion"
+              id="resultadoEncriptacion"
+            ></textarea>
           </div>
         </div>
+        <div class="CajaSecundaria"></div>
       </div>
-      <div class="cajaSecundaria">
-        <div class="cajaSecundariaUno">
-          <img src="img/person.png" alt="ImagenDePersonaPensante" width: 250px
-          style="width: 250px ;" />
-          <h3>Ningun mensaje fue encontrado</h3>
-          <p>Ingresa el texto que desees encriptar o Desencriptar</p>
+      <div class="secundaria">
+        <h2>Dencriptador</h2>
+        <div class="cajaPrimaria">
+          <div class="cajaPrimariaUno">
+            <label for="contraseñaDesencriptar">Contrasena</label>
+            <input
+              class="input"
+              type="password"
+              id="contraseñaDesencriptar"
+              name="contraseñaDesencriptar"
+            />
+            <label for="informacionDesencriptar"
+              >Informacion a Dencriptador</label
+            >
+            <textarea
+              class="textarea"
+              name="informacionDesencriptar"
+              id="informacionDesencriptar"
+            ></textarea>
+            <button class="buton" id="botonDesencriptar">Dencriptador</button>
+          </div>
+          <div class="cajaPrimariaDos">
+            <label for="resultadoDesencriptacion">Texto Dencriptado</label>
+            <textarea
+              class="textareaDos"
+              name="resultadoDesencriptacion"
+              id="resultadoDesencriptacion"
+            ></textarea>
+          </div>
         </div>
+        <div class="CajaSecundaria"></div>
       </div>
     </main>
   </body>
