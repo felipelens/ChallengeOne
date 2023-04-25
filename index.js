@@ -117,20 +117,18 @@ document.addEventListener("DOMContentLoaded", async () => {
   $botonDesencriptar.onclick = async () => {
     const contraseña = $contraseñaDesencriptar.value;
     if (!contraseña) {
-      return alert("No hay contraseña");
+      return alert("No Hay Contraseña");
     }
     const textoCifradoBase64 = $informacionDesencriptar.value;
     if (!textoCifradoBase64) {
-      return alert("No hay texto en base64");
+      return alert("No hay informacion para desencriptar");
     }
     try {
       const desencriptado = await desencriptar(contraseña, textoCifradoBase64);
       $resultadoDesencriptacion.value = desencriptado;
     } catch (e) {
       $resultadoDesencriptacion.value =
-        "Error desencriptando: " +
-        e.message +
-        ". ¿La contraseña es la correcta y la información está en base64?";
+        "Error al momento de desencriptar, por favor valide la informacion si esta escrita correctamente: ";
     }
   };
 });
